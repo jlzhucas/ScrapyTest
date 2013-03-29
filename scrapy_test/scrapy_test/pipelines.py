@@ -13,6 +13,7 @@ class MySQLPipeline(object):
     def __init__(self):
         self.conn = MySQLdb.connect(host=settings['MySQL_SERVER'], user=settings['MySQL_USER'], db=settings['scrapy_test'], charset='utf-8')
         self.cursor = self.conn.cursor()
+        # TODO: need to create table
 
     def process_item(self, item, spider):
         valid = True
@@ -23,6 +24,7 @@ class MySQLPipeline(object):
                 valid = False
                 raise DropItem("Missing %s of blogpost from %s" % (data, item['url']))
         if valid:
+            # TODO: need to insert data to table
             self.cursor.execute()
             self.conn.commit()
             self.cursor.close()

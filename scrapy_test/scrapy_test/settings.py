@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = 'scrapy_test.spiders'
 ITEM_PIPELINES = ['scrapy_test.pipelines.MySQLPipeline',]
 
 MySQL_SERVER = "localhost"
-MySQL_DB = "scrapy_test"
+MySQL_DB = "isbullshit"
 MySQL_USER = "root"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
