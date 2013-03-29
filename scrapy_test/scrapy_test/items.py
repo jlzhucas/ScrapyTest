@@ -4,7 +4,9 @@
 # http://doc.scrapy.org/topics/items.html
 from scrapy.item import Item, Field
 
-class DmozItem(Item):
+class IsBullshitItem(Item):
     title = Field()
+    author = Field()
+    tag = Field()
+    date = Field()
     link = Field()
-    desc = Field()
